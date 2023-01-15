@@ -9,6 +9,23 @@
     --white-color: #ffffff;
 }
 
+/* =============== Dropping styles ================ */
+
+h1,h2,h3,h4,p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -23,7 +40,13 @@ body {
     text-decoration: none;
 }
 
-/* Componetns */
+button {
+    cursor: pointer;
+}
+
+/* =============== Dropping styles ================ */
+
+/* =============== Componetns ===================== */
 
 .bg-dark {
     background-color: var(--dark-color);
@@ -42,6 +65,10 @@ body {
     line-height: 1.1;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
+
+    text-align: center;
+
     color: var(--dark-color);
 }
 
@@ -50,6 +77,9 @@ body {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+
+    margin-bottom: 8px;
+
     color: var(--dark-color);
 }
 
@@ -63,9 +93,13 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    padding: 16px 32px;
+    border-radius: 4px;
+
+    margin-top: 48px;
+
     letter-spacing: 0.04em;
     background: var(--primary-brand-color);
-    cursor: pointer;
     color: var(--white-color);
 }
 
@@ -78,6 +112,7 @@ body {
     background: var(--light-color);
     color: var(--primary-brand-color);
     cursor: pointer;
+    padding: 12px 24px;
 }
 
 .btn-filter:hover {
@@ -85,15 +120,28 @@ body {
     color: var(--white-color);
 }
 
-/* Componetns */
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
-/* Logo */
+.section {
+    padding: 120px 0;
+}
+
+/* =============== Componetns ===================== */
+
+/* ================== Logo ======================== */
 .logo {
     font-family: 'Raleway', sans-serif;
         font-weight: 800;
         font-size: 18px;
         line-height: 1.33;
         letter-spacing: 0.03em;
+        margin-right: 76px;
         text-transform: uppercase;
         color: var(--primary-brand-color);
 }
@@ -115,7 +163,43 @@ body {
         color: var(--dark-color);
 }
 
-/* Navigation Menu */
+/* ================== Logo ======================== */
+
+/* ================== Header ====================== */
+
+.page-header {
+    padding: 24px 0;
+    border-bottom: 1px solid #E7E9FC;
+}
+
+.page-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.contact-nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu-item:not(:last-child) {
+    margin-right: 46px;
+}
+
+/* ================== Header ====================== */
+
+/* ============== Navigation Menu ================= */
 
 .menu-link:hover,
 .menu-link:focus {
@@ -126,7 +210,12 @@ body {
         font-style: normal;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        /* margin-right: 40px; */
         color: var(--text-color);
+}
+
+.contact-info:not(last child) {
+    margin-right: 40px;
 }
 
 .contact-link:hover,
@@ -138,27 +227,120 @@ body {
     color: var(--pressed-color)
 }
 
-/* Navigation Menu */
+/* ============== Navigation Menu ================= */
 
-/* Main */
+/* =================== Hero ======================= */
 
-/* Hero */
+.hero.bg-dark {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    text-align: center;
+}
+
 .hero-title {
+        max-width: 498px;
         font-size: 56px;
-        line-height: 1.0;
+        line-height: 1.07;
         text-align: center;
         letter-spacing: 0.02em;
+        text-transform: capitalize;
+
+        margin: 0 auto;
+
         color: var(--white-color);
 }
 
+/* =================== Hero ======================= */
 
+/* ================== Our features ================ */
 
+.featurs {
+    display: flex;
+    gap: 24px;
+}
 
-/* Footer */
+/* ================== Our features ================ */
+
+/* ================== Activities ================== */
+
+.activities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* ================== Activities ================== */
+
+/* ================= Our team ===================== */
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.team-card {
+    width: 264px;
+    flex-basis: calc((100% - 72px) / 4);
+}
+
+.team-card-content {
+    padding: 32px 0;
+    text-align: center;
+}
+
+/* ================= Our team ===================== */
+
+/* =================== Footer ===================== */
+
+.footer {
+    padding: 100px 0;
+}
 
 .footer-description {
+    width: 264px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    margin-top: 16px;
+
     color: var(--accent-color);
 }
 
+/* =================== Footer ===================== */
+
+/* ================= Portfolio ==================== */
+
+.section-portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.filter {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 72px;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.project-card {
+    flex-basis: calc((100% - 48px) / 3);
+}
+
+.portfolio-card-content {
+    padding: 32px 16px 0;
+    border: 1px solid var(--accent-color);
+    border-top: none;
+}
+
+.filter.list {
+    justify-content: center;
+}
+
+/* ================= Portfolio ==================== */
